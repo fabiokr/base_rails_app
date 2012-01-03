@@ -17,7 +17,7 @@ end
 group :test do
   gem "database_cleaner"    # Database cleanup on specs
   gem "rspec-rails"         # Spec framework
-  gem "turnip"              # Features framework
+  gem "turnip", git: "git://github.com/jnicklas/turnip.git" # Features framework
   gem "factory_girl_rails"  # Factories
   gem "shoulda-matchers"    # Rspec matchers
   gem "capybara"            # Integration specs api

@@ -1,3 +1,11 @@
+GIT
+  remote: git://github.com/jnicklas/turnip.git
+  revision: 6c2d7d6d911625c9b7e39f144296d379664a8cf7
+  specs:
+    turnip (0.2.0)
+      gherkin (>= 2.5)
+      rspec (~> 2.0)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -183,9 +191,6 @@ GEM
     treetop (1.4.10)
       polyglot
       polyglot (>= 0.3.1)
-    turnip (0.2.0)
-      gherkin
-      rspec (~> 2.0)
     twitter-bootstrap-rails (1.4.3)
       actionpack
       jquery-rails (>= 1.0)
@@ -221,6 +226,6 @@ DEPENDENCIES
   slim-rails
   sqlite3
   therubyracer
-  turnip
+  turnip!
   twitter-bootstrap-rails
   uglifier
