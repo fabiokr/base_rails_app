@@ -1,0 +1,53 @@
+doctype html
+html lang="#{locale}"
+  head
+    = title_tag
+
+    /[ if lt IE 9 ]
+      = javascript_include_tag "http://html5shim.googlecode.com/svn/trunk/html5.js"
+
+    = stylesheet_link_tag    "application"
+    
+    = csrf_meta_tags
+    = tag 'meta', :name => 'charset',     :content => "utf-8"
+    = tag 'meta', :name => 'description', :content => t("description")
+    = tag 'meta', :name => 'author',      :content => t("author")
+
+    = favicon_link_tag 'favicon.ico'
+    = favicon_link_tag 'apple-touch-icon.png',         :rel => 'apple-touch-icon', :type => 'image/png'
+    = favicon_link_tag 'apple-touch-icon-72x72.png',   :rel => 'apple-touch-icon', :type => 'image/png', sizes: "72x72"
+    = favicon_link_tag 'apple-touch-icon-114x114.png', :rel => 'apple-touch-icon', :type => 'image/png', sizes: "114x114"
+  body
+    .topbar
+      .fill
+        .container
+          = link_to t("application"), "/", :class => "brand"
+          
+          ul.nav
+            li.active
+              = link_to "Home", "/"
+            li
+              = link_to "About", "#about"
+            li
+              = link_to "Contact", "#contact"
+
+          = form_for :login, action: "#form", html: {:class => "pull-right"} do |form|
+            = form.text_field     :username, placeholder: t("username"), :class => "input-small"
+            | &nbsp;
+            = form.password_field :password, placeholder: t("password"), :class => "input-small"
+            | &nbsp;
+            = button_tag t("sign_in"), :class => "btn"
+
+    .container
+      .content
+        .page-header
+          h1 
+            Page Name 
+            small Supporting text or tagline
+        .row
+          = yield
+
+      footer
+        p &copy; #{t("company")} #{current_year}
+
+    = javascript_include_tag "application"

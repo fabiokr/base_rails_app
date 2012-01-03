@@ -1,0 +1,8 @@
+en:
+  application: "BaseApp"
+  company:     "BaseApp"
+  description: "BaseApp description"
+  author:      "BaseApp author"
+  username:    "Username"
+  password:    "Password"
+  sign_in:     "Sign in"

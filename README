@@ -1,0 +1,3 @@
+== Base Application
+
+To run SimpleCov: COVERAGE=true rspec spec
